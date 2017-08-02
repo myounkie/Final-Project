@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>BluePrint V1.0</title>
+      <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <style>
+        .container{
+          display:none;
+        }
+
+        .container.active{
+          display:block;
+        }
+      </style>
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <section class="blueprintHeader">
+            <a href="#"><h1>BluePrint</h1></a>
+          </section>
+        </header>
+
+<!-- Contact Form begings https://www.w3schools.com/howto/howto_css_contact_form.asp -->
+
+
+<div id = "customerForm" class="container active">
+  <form>
+
+  <h2>Company Info</h2>
+
+    <label for="companyName">Company Name</label>
+    <input type="text" id="companyName" name="companyName" placeholder="Company name...">
+
+    <label for="numberUsers">Number of Users</label>
+    <input type="text" id="numberUsers" name="numberUsers" placeholder="Company's number of users...">
+
+    <label for="jobNumber">Job Number</label>
+    <input type="text" id="jobNumber" name="jobNumber" placeholder="The job number in NetSuite...">
+
+    <label for="pserNumber">PSER Number</label>
+    <input type="text" id="pserNumber" name="pserNumber" placeholder="The PSER number in NetSuite...">
+  
+  <h2>Project Details</h2>
+
+    <!--project detail vertical info handlebars insert-->
+    <div id="verticalInfo"></div>
+
+    <button id="customerSubmit" data-block="addonForm"> Submit </button>
+
+  </form>
+</div>
+
+<!--Contact form ends-->
+
+
+<!-- Add-on Form Begins -->
+<div id="addonForm" class="container">
+
+  <form>
+
+  <h2>Add-Ons</h2>
+
+
+    <label for="processArea">Process Area</label>
+    <select id="processArea" name="processArea">
+      <option value="recordtoReport">Record to Report</option>
+      <option value="procuretoPay">Procure to Pay</option>
+    </select>
+
+    <label for="product">Product</label>
+    <select id="product" name="product">
+      <option value="fixedAssets">Fixed Assets</option>
+      <option value="suitePeople">SuitePeople</option>
+    </select>
+  
+    <!--project detail vertical info handlebars insert-->
+    <div id="verticalInfo"></div>
+
+    <button id="customerSubmit" data-block="requirementForm"> Submit </button>
+
+  </form>
+</div>
+
+<!-- Add-on Form Ends -->
+
+<!-- Handle Bars Begins -->
+
+
+<script id="t" type="text/x-handlebars">
+    <table>
+    {{#Products}}
+    <tr>
+        <td>
+            <select id="vertical">
+                {{#each ../Verticals}}
+                <option value="{{verticalID}}">{{Name}}</option>
+                {{/each}}
+            </select>
+        </td>
+        <td>
+            <select id="solution">
+                {{#each ../Solutions}}
+                <option value="{{solutionID}}">{{Name}}</option>
+                {{/each}}
+            </select>
+        </td>
+        <td>
+            <select id="stairstep">
+                {{#each ../StairStep}}
+                <option value="{{stepID}}">{{Name}}</option>
+                {{/each}}
+            </select>
+        </td>
+    </tr>
+    {{/Products}}
+</table>
+</script>
+
+          
+<!--Handle Bars Ends -->
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/handlebars-v4.0.10.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

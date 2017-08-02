@@ -1,0 +1,78 @@
+/* General styles */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blueprintHeader {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+header {
+  background-color: #1d41fe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header h1 {
+  color: #FFF;
+  padding: 10px 2%;
+  margin: 0;
+  width: 16%;
+  float: left;
+  padding-left: 0;
+}
+
+/* Header navigation bar */
+header nav {
+  padding: 10px 2%;
+  width: 76%;
+  float: right;
+  text-align: right;
+  line-height: 30px;
+  margin-top: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 1 px; /* Some padding around input boxes */  
+    border: 5 px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button{
+    background-color: #8295fe;
+    color: white;
+    padding: 12px 20px;
+    border: 5 px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button:hover {
+    background-color: #0423cb;
+}
+
+/* Add a background color and some padding around the form */
+container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+#customerForm {
+  margin-top: 75px
+}

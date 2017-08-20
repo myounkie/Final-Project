@@ -76,3 +76,22 @@ container {
 #customerForm {
   margin-top: 75px
 }
+
+#addonForm {
+  margin-top: 75px
+}
+
+#requirementsForm {
+  margin-top: 75px
+}
+
+/*requirements table */
+
+th {
+    background-color: #808080;
+    color: white;
+    border-bottom: 1px solid #ddd;
+
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
